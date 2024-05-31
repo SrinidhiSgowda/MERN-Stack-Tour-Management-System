@@ -1,0 +1,16 @@
+The corsOptions object is a configuration for CORS (Cross-Origin Resource Sharing). CORS is a mechanism that allows many resources (e.g., fonts, JavaScript, etc.) on a web page to be requested from another domain outside the domain from which the resource originated.
+  
+Let’s break down the properties:
+
+origin: true: This property is used to specify which domains are allowed to access the resources. When origin is set to true, it means that any domain can access the resources. This is useful when you want your API to be publicly accessible. However, in a production environment, it’s recommended to restrict this to specific domains to prevent abuse.
+credentials: true: This property allows browsers to include credentials like cookies or HTTP authentication in the request. When credentials is set to true, it means that the server will include the Access-Control-Allow-Credentials header in the response. This header tells the browser that the server allows credentials to be included in cross-origin requests.
+Please note that there seems to be a typo in your code. The C in Credentials should be lowercase, like so: credentials: true. This is because JavaScript is case-sensitive, and the correct property for the CORS configuration object is credentials, not Credentials.
+
+Here’s the corrected code:
+
+JavaScript
+
+const corsOptions = {
+    origin: true,
+    credentials: true
+};
